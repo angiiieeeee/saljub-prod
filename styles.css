@@ -1,0 +1,1042 @@
+@font-face {
+  font-family: "Bohemian Typewriter";
+  src: url("assets/Bohemian Typewriter.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bohemian Typewriter", serif !important;
+}
+
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #ab5629;
+  --text-color: #ffffff;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+.menu-item,
+.item-name,
+.item-price,
+.nav-links,
+.logo,
+.language-tab,
+.section-title,
+.cta-button {
+  font-family: "Bohemian Typewriter", serif !important;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 5);
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estilos del botón hamburguesa */
+.hamburger {
+  display: none;
+}
+
+.line1, .line2, .line3 {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Media query para móvil */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    font-size: 1.2rem;
+    opacity: 1;
+  }
+
+  .nav-links.nav-active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animación del hamburger */
+  .hamburger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: white;
+  }
+
+  .hamburger.toggle .line2 {
+    opacity: 0;
+  }
+
+  .hamburger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: white;
+  }
+
+  .navbar {
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-container {
+    width: 90%; /* Reducir el ancho para dar margen */
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .menu-items {
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu-item {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .item-name {
+    font-size: 0.85rem;
+    padding-right: 8px;
+  }
+
+  .item-price {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .carta {
+    padding: 2rem 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    padding: 0 15px;
+  }
+
+  .fullwidth-slideshow {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+
+  .slide img,
+  .fullwidth-slideshow,
+  .slide {
+    height: 350px; /* Aumentado de 300px a 350px */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .item-name {
+    font-size: 0.75rem;
+    padding-right: 5px;
+  }
+
+  .item-price {
+    font-size: 0.75rem;
+  }
+
+  .menu-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .menu-item {
+    padding: 0.3rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .menu-container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .menu-items {
+    padding: 0 5px;
+  }
+
+  .carta {
+    padding: 2rem 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+
+  .language-tabs {
+    gap: 0.5rem;
+  }
+
+  .language-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .slide img,
+  .fullwidth-slideshow,
+  .slide {
+    height: 250px; /* Aumentado de 200px a 250px */
+  }
+}
+
+/* Forzar que no haya scroll horizontal */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.menu-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 55vh;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.slogan {
+  margin-top: 40px;
+  font-family: "Bohemian Typewriter", serif;
+  text-align: center;
+}
+
+.slogan p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.color-word {
+  color: var(--accent-color);
+}
+.color-word-schedule {
+  color: var(--text-color);
+}
+
+.cta-button {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #8b451f;
+}
+
+/* Ajuste para el contenedor del hero */
+.hero > * {
+  margin-top: 30px; /* Espacio entre elementos */
+}
+
+/* About Section */
+.about {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px; /* Space between text and image */
+}
+
+.about-text {
+  flex: 1; /* Takes up available space */
+  text-align: justify;
+}
+
+.about-image {
+  flex: 0 0 20%; /* Takes up 40% of the container width */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+}
+
+/* carta Section */
+.carta {
+  padding: 4rem 1rem;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta .section-title {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Bohemian Typewriter", serif;
+}
+
+.carta .section-subtitle {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-family: "Bohemian Typewriter", serif;
+}
+
+.carta-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.carta-tab {
+  padding: 0.7rem 1.5rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  font-family: "Bohemian Typewriter", serif;
+}
+
+.carta-tab.active,
+.carta-tab:hover {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.carta-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.carta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.carta-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  background: url("/api/placeholder/80/80") center/cover no-repeat;
+  flex-shrink: 0;
+}
+
+.carta-item-content h3 {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carta-item-content p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.menu-items.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* Para asegurar que cada elemento del menú ocupe el espacio adecuado */
+.menu-item {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.columns {
+  display: flex;
+}
+
+.img {
+  max-width: 234px;
+  width: 100%;
+}
+
+.xarxes {
+  background-color: #ab5629;
+}
+
+/* Estilos para los contenedores de menú */
+.menu-container {
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-container.active {
+  display: block;
+}
+
+/* Estilos para los botones de idioma */
+.language-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.language-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.language-tab.active {
+  color: var(--accent-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.menu-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.menu-scroll-container::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+.menu-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.menu-container {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  min-width: min-content;
+  height: 100%;
+}
+
+.menu-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu-section:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 80%;
+  background-color: var(--accent-color);
+  opacity: 0.5;
+}
+
+.menu-section h3 {
+  font-family: "Bohemian Typewriter", serif;
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menu-items {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+.item-name {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.item-price {
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 5rem 10%;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/patatas.jpg") center/cover no-repeat;
+}
+.testimonials h2 {
+  color: #fff;
+}
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.tetimonial-section-title {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.testimonial-slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Contact Section */
+/* Contenedor principal - centrado y con ancho máximo */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sección de contacto */
+.contact {
+  padding: 60px 0;
+  background-color: var(--primary-color);
+}
+
+/* Wrapper para la disposición flex */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Información de contacto */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Detalles de contacto */
+.contact-details {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contact-form h1 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 150px;
+  padding: px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Para asegurar que el placeholder también está alineado a la izquierda */
+.contact-form textarea::placeholder {
+  text-align: left;
+}
+
+.contact-form button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact-form button[type="submit"]:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Asegurar que el formulario empiece desde la izquierda */
+.contact-form form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Alinear a la izquierda el título, caja y botón de sugerencias */
+.contact-info .color-word h1 {
+  text-align: left;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+
+
+/* Estilos base para el slideshow */
+.fullwidth-slideshow {
+  position: relative;
+  width: 100%;
+  height: 850px; /* Aumentado de 800px a 850px */
+}
+
+.slide {
+  width: 100%;
+  height: 850px;
+}
+
+.slide img {
+  width: 100%;
+  height: 850px;
+  object-fit: cover;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .fullwidth-slideshow,
+  .slide,
+  .slide img {
+    height: 350px; /* Aumentado de 300px a 350px */
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fullwidth-slideshow,
+  .slide,
+  .slide img {
+    height: 250px; /* Aumentado de 200px a 250px */
+  }
+  
+  .slide-indicators {
+    bottom: 20px;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery-section h2,
+#gallery h2,
+.section-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Si es necesario, asegurar que el contenedor también está centrado */
+.gallery-section,
+#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1,
+.section-title,
+.menu-section h3,
+#gallery h2,
+.gallery-section h2 {
+  color: var(--accent-color); /* Color marrón/naranja del tema */
+}
+
+/* Centrar el mapa */
+.map-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Asegurar que todo esté alineado a la izquierda con el mismo margen */
+.contact-info,
+.color-word,
+.contact-details,
+.color-word-schedule,
+.map-container,
+.contact-form {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* Media queries para responsive */
+@media screen and (max-width: 768px) {
+  .map-container {
+    padding: 0 15px;
+  }
+  
+  .contact-form {
+    padding: 0 15px;
+  }
+
+  .contact-form textarea {
+    padding: 10px;
+    margin: 0 auto 15px auto;
+  }
+
+  .contact-form h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Estilos base para las fotos de la galería */
+.gallery-section img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .gallery-section img {
+    height: 300px; /* Tablets - aumentado de 200px */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-section img {
+    height: 200px; /* Móvil - aumentado de 80px */
+  }
+}
+
+/* Estilos para la galería y slideshow */
+.gallery-section {
+  position: relative;
+}
+
+/* Estilos para los indicadores/botones */
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 100;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+}
+
+.indicator.active {
+  background-color: var(--accent-color);
+}
+
+/* Ajustar el tamaño del h4 en la sección de galería */
+.gallery-section h4.section-title {
+  font-size: 1.5rem; /* Aumentado de 1.2rem a 1.5rem */
+}
+
+/* Ajuste responsive */
+@media screen and (max-width: 768px) {
+  .gallery-section h4.section-title {
+    font-size: 1.3rem; /* Aumentado de 1rem a 1.3rem */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-section h4.section-title {
+    font-size: 1.1rem; /* Aumentado de 0.9rem a 1.1rem */
+  }
+}
+
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 769px) {
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .contact-info {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .map-container {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-details,
+  .color-word h1,
+  .color-word-schedule h1,
+  .contact-form {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+/* Asegurar que se mantiene responsive */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 50vh; /* Un poco menos en tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding-top: 45vh; /* Y menos en móviles */
+  }
+}

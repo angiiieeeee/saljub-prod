@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>S'Aljub</title>
+</head>
+
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">S'Aljub</a>
+    <ul class="nav-links">
+      <li><a href="#home">Inici</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#contact">Contacte</a></li>
+      <li>
+        <a href="https://www.instagram.com/baraljub/" target="_blank">
+          <img src="assets/instagram.png" alt="Instagram" />
+        </a>
+      </li>
+    </ul>
+
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div style="
+        background-image: url('assets/mainbackground.jpg');
+        background-size: cover;
+        background-position: center;
+      ">
+    <section id="home" class="hero">
+      <div class="slogan">
+        <p>
+          "It's only <span class="color-word">drinks</span> and
+          <span class="color-word">tapas</span>, but I like it."
+        </p>
+      </div>
+      <a href="https://www.google.com/maps/place/S%E2%80%99Aljub/@39.9875247,4.091323,17z/data=!4m14!1m7!3m6!1s0x12be21c351908319:0x6f2b78c93cb2af2a!2zU-KAmUFsanVi!8m2!3d39.9875247!4d4.0939033!16s%2Fg%2F11s55lmwq7!3m5!1s0x12be21c351908319:0x6f2b78c93cb2af2a!8m2!3d39.9875247!4d4.0939033!16s%2Fg%2F11s55lmwq7?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+        class="cta-button">Troban's</a>
+    </section>
+  </div>
+
+  <!-- Carta Section -->
+  <section id="carta" class="carta">
+    <h2 class="section-title">CARTA</h2>
+    <div id="carta-content">
+
+
+      <!-- Language selector tabs -->
+      <div class="language-tabs">
+        <button class="language-tab active" data-lang="ca">Català</button>
+        <button class="language-tab" data-lang="en">English</button>
+        <button class="language-tab" data-lang="fr">Français</button>
+      </div>
+
+      <div class="menu-scroll-container">
+        <!-- Catalán menu (default shown) -->
+        <div class="menu-container menu-slide active" id="menu-ca">
+          <div class="menu-section">
+            <h3>LES NOSTRES TAPES</h3>
+            <div class="menu-items columns">
+              <!-- Mantén aquí tus elementos de menú en catalán -->
+              <div class="menu-item">
+                <span class="item-name">GILDA ANXOVES</span>
+                <span class="item-price">2.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">MINI SANDWITX DE BRIE AMB TÒFONA</span>
+                <span class="item-price">5.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">NATXOS AMB FORMATGE</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">BRAVES ARTESANES</span>
+                <span class="item-price">6.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CRUIXENT "RABO DE TORO"</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">"HOT DOG" CLÀSSIC</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">"ARTESANITO" DE VADELLA</span>
+                <span class="item-price">2.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">ENTREPÀ DE PORC ESMOLLAT</span>
+                <span class="item-price">8.20€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TIRES DE POLLASTRE AMB SALSA S'ALJUB</span>
+                <span class="item-price">8.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CROQUETES DE GAMBA DE MENORCA</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CROQUETES DE PERNIL</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CANELONS TRUFATS</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CANELONS DE PEIX I MARISC</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CARBASSONS FARCITS DE PERNIL IBÈRIC</span>
+                <span class="item-price">6.70€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">RAVIOLIS DE BOLETUS I GAMBES</span>
+                <span class="item-price">8.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">RACIÓ DE PERENIL IBÈRIC</span>
+                <span class="item-price">17.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TORRADA DE SOBRASADA, FORMATGE I MEL</span>
+                <span class="item-price">7.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TORRADA D'ESCALIVADA AMB ANXOVES</span>
+                <span class="item-price">7.00€</span>
+              </div>
+              <!-- Resto de ítems en catalán... -->
+            </div>
+          </div>
+        </div>
+
+        <!-- English menu -->
+        <div class="menu-container menu-slide" id="menu-en">
+          <div class="menu-section">
+            <h3>OUR TAPAS</h3>
+            <div class="menu-items columns">
+              <div class="menu-item">
+                <span class="item-name">ANCHOVIES "GILDA"</span>
+                <span class="item-price">2.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">MINI BRIE SANDWITX WITH TRUFFLE</span>
+                <span class="item-price">5.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">NACHOS WITH CHEESE</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">ARTESAN "BRAVES"</span>
+                <span class="item-price">6.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CRUISED "RABO DE TORO"</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CLASSIC "HOT DOG"</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">VEAL "ARTESANITO"</span>
+                <span class="item-price">2.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">SLICED PORK SANDWICH</span>
+                <span class="item-price">8.20€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CHICKEN STRIPS WITH S'ALJUB SAUCE</span>
+                <span class="item-price">8.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">MENORCA SHRIMP "CROQUETES"</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">HAM "CROQUETES"</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TRUFFIED CANNELLONES</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">FISH AND SEAFOOD CANNELLONES</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">ZUCCHINI STUFFED WITH "JAMÓN IBÉRICO"</span>
+                <span class="item-price">6.70€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">BOLETUS AND SHRIMP RAVIOLIS</span>
+                <span class="item-price">8.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">PORTION OF "JAMÓN IBÉRICO"</span>
+                <span class="item-price">17.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TOAST WITH SOBRASADA, CHEESE AND HONEY</span>
+                <span class="item-price">7.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TOAST WITH "ESCALIVADA" AND ANCHOVIES</span>
+                <span class="item-price">7.00€</span>
+              </div>
+              <!-- Resto de ítems traducidos al inglés... -->
+            </div>
+          </div>
+        </div>
+
+        <!-- French menu -->
+        <div class="menu-container menu-slide" id="menu-fr">
+          <div class="menu-section">
+            <h3>NOS TAPAS</h3>
+            <div class="menu-items columns">
+              <div class="menu-item">
+                <span class="item-name">GILDA AUX ANCHOIS</span>
+                <span class="item-price">2.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">MINI SANDWICH AU BRIE TRUFFÉ</span>
+                <span class="item-price">5.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">NACHOS AU FROMAGE</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">POMMES DE TERRE "BRAVAS" ARTISANALES</span>
+                <span class="item-price">6.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CROUSTILLANT DE QUEUE DE BOEUF</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">HOT DOG CLASSIQUE</span>
+                <span class="item-price">6.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">"ARTESANITO" DE VEAU</span>
+                <span class="item-price">2.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">SANDWICH AU PORC EFFILOCHÉ</span>
+                <span class="item-price">8.20€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">LANIÈRES DE POULET SAUCE S'ALJUB</span>
+                <span class="item-price">8.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CROQUETTES DE CREVETTES DE MINORQUE</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CROQUETTES AU JAMBON</span>
+                <span class="item-price">7.90€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CANNELLONIS TRUFFÉS</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">CANNELLONIS DE POISSON ET FRUITS DE MER</span>
+                <span class="item-price">8.60€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">COURGETTES FARCIES AU JAMBON IBÉRIQUE</span>
+                <span class="item-price">6.70€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">RAVIOLIS AUX CÈPES ET CREVETTES</span>
+                <span class="item-price">8.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">PORTION DE JAMBON IBÉRIQUE</span>
+                <span class="item-price">17.50€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TOAST À LA SOBRASADA, FROMAGE ET MIEL</span>
+                <span class="item-price">7.00€</span>
+              </div>
+              <div class="menu-item">
+                <span class="item-name">TOAST À L'ESCALIVADA ET ANCHOIS</span>
+                <span class="item-price">7.00€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <h4 class="section-title">I A TU, QUE ET VE DE GUST?</h4>
+
+    <div class="fullwidth-slideshow">
+      <!-- Slides -->
+      <div class="slide fade">
+        <img src="assets/hojaldre.jpg" alt="Interior de S'Aljub" />
+      </div>
+
+      <div class="slide fade">
+        <img src="assets/braves.jpg" alt="Nuestras tapas" />
+      </div>
+
+      <div class="slide fade">
+        <img src="assets/croquetas.jpg" alt="Terraza de S'Aljub" />
+      </div>
+
+      <div class="slide fade">
+        <img src="assets/queso.jpg" alt="Cócteles especiales" />
+      </div>
+
+      <div class="slide fade">
+        <img src="assets/pollo.jpg" alt="Momentos en S'Aljub" />
+      </div>
+
+      <div class="slide-indicators">
+        <!-- Botones de navegación -->
+
+        <span class="indicator" data-index="1"></span>
+        <span class="indicator" data-index="2"></span>
+        <span class="indicator" data-index="3"></span>
+        <span class="indicator" data-index="4"></span>
+        <span class="indicator" data-index="5"></span>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-info-wrapper">
+            <div class="color-word">
+              <h1>CONTACTE</h1>
+            </div>
+            <div class="contact-details">
+              <p>
+                Plaça de Pare Camps, 17, 07740 Es Mercadal, Illes Balears
+              </p>
+              <p>barsaljub@gmail.com</p>
+            </div>
+            <div>
+              <div class="color-word-schedule">
+                <h1>HORARI</h1>
+                <div class="contact-details">
+                  <p>12:00 - 15:00</p>
+                  <p>17:00 - 23:00</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="color-word">
+              <h1>CAIXA DE SUGGERÈNCIES</h1>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form action="https://formspree.io/f/mldjvewd" method="POST">
+
+              <label>
+                <textarea name="message"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.93648677375!2d4.091323012752182!3d39.987524671393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12be21c351908319%3A0x6f2b78c93cb2af2a!2zU-KAmUFsanVi!5e0!3m2!1sca!2ses!4v1740565963914!5m2!1sca!2ses"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="copyright">&copy; 2025 S'Aljub. All rights reserved.</p>
+  </footer>
+  <script src="index.js"></script>
+  <script src="instagram-feed.js"></script>
+  </div>
+  </section>
+</body>
+<script src="index.js"></script>
+
+</html>
