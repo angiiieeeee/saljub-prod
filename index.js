@@ -36,19 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if user has already made a choice
   if (!localStorage.getItem("cookieConsent")) {
-    cookieBanner.style.display = "block";
+    cookieBanner.classList.remove("display-none");
   }
 
   acceptButton.addEventListener("click", function () {
     localStorage.setItem("cookieConsent", "accepted");
-    cookieBanner.style.display = "none";
+    cookieBanner.classList.add("display-none");
     // Initialize Google Analytics
     initGoogleAnalytics();
   });
 
   rejectButton.addEventListener("click", function () {
     localStorage.setItem("cookieConsent", "rejected");
-    cookieBanner.style.display = "none";
+    cookieBanner.classList.add("display-none");
     // Don't initialize Google Analytics
   });
 
