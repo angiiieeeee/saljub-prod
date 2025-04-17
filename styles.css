@@ -1181,3 +1181,12 @@ h1,
     padding-top: 45vh; /* Y menos en móviles */
   }
 }
+
+/* Estilos para las frases multilingües */
+.phrase-multilang span {
+  display: none;
+}
+
+.phrase-multilang span.active {
+  display: block;
+}

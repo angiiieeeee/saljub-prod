@@ -157,9 +157,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Language switcher functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionar todos los botones de idioma y menús
   const languageTabs = document.querySelectorAll(".language-tab");
   const menuContainers = document.querySelectorAll(".menu-container");
+  
+  // Añadir selección de frases multilingües
+  const phraseCa = document.querySelector(".phrase-ca");
+  const phraseEn = document.querySelector(".phrase-en");
+  const phraseFr = document.querySelector(".phrase-fr");
+
+  // Función para actualizar la frase según el idioma
+  function updatePhrase(lang) {
+    // Ocultar todas las frases
+    [phraseCa, phraseEn, phraseFr].forEach(phrase => {
+      if (phrase) phrase.classList.remove("active");
+    });
+
+    // Mostrar la frase del idioma seleccionado
+    switch(lang) {
+      case "ca":
+        if (phraseCa) phraseCa.classList.add("active");
+        break;
+      case "en":
+        if (phraseEn) phraseEn.classList.add("active");
+        break;
+      case "fr":
+        if (phraseFr) phraseFr.classList.add("active");
+        break;
+    }
+  }
 
   // Ocultar todos los menús excepto el catalán por defecto
   menuContainers.forEach((menu) => {
@@ -182,6 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Obtener el idioma seleccionado
       const selectedLang = this.getAttribute("data-lang");
 
+      // Actualizar la frase según el idioma
+      updatePhrase(selectedLang);
+
       // Ocultar todos los menús
       menuContainers.forEach((menu) => {
         menu.style.display = "none";
@@ -194,6 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Inicializar con el idioma por defecto (catalán)
+  updatePhrase("ca");
 });
 
 // Cargar el contenido de la carta
