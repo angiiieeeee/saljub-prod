@@ -39,6 +39,10 @@ body {
   display: none;
 }
 
+.phrase {
+  color: var(--accent-color);
+}
+
 .cookie-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -1183,10 +1187,50 @@ h1,
 }
 
 /* Estilos para las frases multilingües */
-.phrase-multilang span {
-  display: none;
+.phrase-multilang {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
 }
 
+/* Ocultar TODAS las frases por defecto */
+.phrase-multilang span {
+  display: none !important; /* Forzar ocultamiento */
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Mostrar SOLO la frase activa */
 .phrase-multilang span.active {
-  display: block;
+  display: block !important; /* Forzar visualización */
+  position: relative;
+}
+
+/* Responsive para la frase */
+@media screen and (min-width: 1024px) {
+  .phrase-multilang span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .phrase-multilang span {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .phrase-multilang span {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .phrase-multilang span {
+    font-size: 1.2rem;
+  }
 }

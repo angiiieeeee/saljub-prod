@@ -157,74 +157,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Language switcher functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const languageTabs = document.querySelectorAll(".language-tab");
-  const menuContainers = document.querySelectorAll(".menu-container");
-  
-  // Añadir selección de frases multilingües
-  const phraseCa = document.querySelector(".phrase-ca");
-  const phraseEn = document.querySelector(".phrase-en");
-  const phraseFr = document.querySelector(".phrase-fr");
+  const phrases = {
+    ca: document.querySelector(".phrase-ca"),
+    en: document.querySelector(".phrase-en"),
+    fr: document.querySelector(".phrase-fr")
+  };
 
-  // Función para actualizar la frase según el idioma
+  // Función para actualizar la frase visible
   function updatePhrase(lang) {
-    // Ocultar todas las frases
-    [phraseCa, phraseEn, phraseFr].forEach(phrase => {
-      if (phrase) phrase.classList.remove("active");
+    // Ocultar TODAS las frases primero
+    Object.values(phrases).forEach(phrase => {
+      if (phrase) {
+        phrase.classList.remove("active");
+      }
     });
 
-    // Mostrar la frase del idioma seleccionado
-    switch(lang) {
-      case "ca":
-        if (phraseCa) phraseCa.classList.add("active");
-        break;
-      case "en":
-        if (phraseEn) phraseEn.classList.add("active");
-        break;
-      case "fr":
-        if (phraseFr) phraseFr.classList.add("active");
-        break;
+    // Mostrar SOLO la frase del idioma seleccionado
+    if (phrases[lang]) {
+      phrases[lang].classList.add("active");
     }
   }
 
-  // Ocultar todos los menús excepto el catalán por defecto
-  menuContainers.forEach((menu) => {
-    if (menu.id === "menu-ca") {
-      menu.style.display = "block";
-    } else {
-      menu.style.display = "none";
-    }
-  });
+  // Inicializar con catalán
+  updatePhrase("ca");
 
-  // Añadir event listeners a los botones de idioma
-  languageTabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
-      // Remover clase active de todos los tabs
-      languageTabs.forEach((t) => t.classList.remove("active"));
-
-      // Añadir clase active al tab seleccionado
-      this.classList.add("active");
-
-      // Obtener el idioma seleccionado
+  // Event listeners para los botones de idioma
+  const languageTabs = document.querySelectorAll(".language-tab");
+  languageTabs.forEach(tab => {
+    tab.addEventListener("click", function() {
       const selectedLang = this.getAttribute("data-lang");
-
-      // Actualizar la frase según el idioma
       updatePhrase(selectedLang);
-
-      // Ocultar todos los menús
-      menuContainers.forEach((menu) => {
-        menu.style.display = "none";
-      });
-
-      // Mostrar el menú del idioma seleccionado
-      const selectedMenu = document.getElementById(`menu-${selectedLang}`);
-      if (selectedMenu) {
-        selectedMenu.style.display = "block";
-      }
     });
   });
-
-  // Inicializar con el idioma por defecto (catalán)
-  updatePhrase("ca");
 });
 
 // Cargar el contenido de la carta
