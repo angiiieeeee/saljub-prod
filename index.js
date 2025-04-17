@@ -158,35 +158,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // Language switcher functionality
 document.addEventListener("DOMContentLoaded", function () {
   const phrases = {
-    ca: document.querySelector(".phrase-ca"),
-    en: document.querySelector(".phrase-en"),
-    fr: document.querySelector(".phrase-fr")
+    ca: "I A TU, QUÈ ET VE DE GUST?",
+    en: "AND YOU, WHAT WOULD YOU LIKE?",
+    fr: "ET VOUS, QU'EST-CE QUI VOUS FERAIT PLAISIR?"
   };
 
-  // Función para actualizar la frase visible
-  function updatePhrase(lang) {
-    // Ocultar TODAS las frases primero
-    Object.values(phrases).forEach(phrase => {
-      if (phrase) {
-        phrase.classList.remove("active");
-      }
-    });
-
-    // Mostrar SOLO la frase del idioma seleccionado
-    if (phrases[lang]) {
-      phrases[lang].classList.add("active");
-    }
-  }
-
-  // Inicializar con catalán
-  updatePhrase("ca");
-
+  const phraseElement = document.getElementById("dynamic-phrase");
+  
   // Event listeners para los botones de idioma
   const languageTabs = document.querySelectorAll(".language-tab");
   languageTabs.forEach(tab => {
     tab.addEventListener("click", function() {
       const selectedLang = this.getAttribute("data-lang");
-      updatePhrase(selectedLang);
+      if (phraseElement && phrases[selectedLang]) {
+        phraseElement.textContent = phrases[selectedLang];
+      }
     });
   });
 });

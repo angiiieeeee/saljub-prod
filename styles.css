@@ -1234,3 +1234,30 @@ h1,
     font-size: 1.2rem;
   }
 }
+
+/* Ajuste del tamaño de letra para el dynamic-phrase */
+#dynamic-phrase {
+  font-size: 1.6rem; /* Tamaño base más pequeño para pantallas grandes */
+  text-align: center;
+  margin: 20px 0;
+  color: var(--accent-color);
+}
+
+/* Ajustes responsive */
+@media screen and (max-width: 1024px) {
+  #dynamic-phrase {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #dynamic-phrase {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #dynamic-phrase {
+    font-size: 1rem;
+  }
+}
