@@ -615,6 +615,7 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap; /* Añadido para mejor responsive con 4 botones */
 }
 
 .language-tab {
@@ -631,6 +632,18 @@ body {
   color: var(--accent-color);
   font-weight: bold;
   border-bottom: 2px solid var(--accent-color);
+}
+
+/* Ajuste responsive para 4 botones */
+@media screen and (max-width: 480px) {
+  .language-tabs {
+    gap: 0.5rem;
+  }
+  
+  .language-tab {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
 }
 
 .menu-scroll-container::-webkit-scrollbar {

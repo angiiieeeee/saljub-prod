@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const phrases = {
     ca: "I A TU, QUÈ ET VE DE GUST?",
+    es: "Y A TI, ¿QUÉ TE APETECE?",
     en: "AND YOU, WHAT WOULD YOU LIKE?",
     fr: "ET VOUS, QU'EST-CE QUI VOUS FERAIT PLAISIR?"
   };
